@@ -3,7 +3,7 @@ import requests
 import json
 import cv2
 
-addr = 'http://localhost:5000'
+addr = 'https://pose-estimation-flask.herokuapp.com/'
 test_url = addr + '/predict'
 
 # prepare headers for http request
@@ -16,6 +16,7 @@ _, img_encoded = cv2.imencode('.jpg', img)
 # send http request with image and receive response
 response = requests.post(test_url, data=img_encoded.tostring(), headers=headers)
 # decode response
+print(response.status_code)
 # print(json.loads(response.text))
 landmarks = json.loads(response.text)
 print(landmarks)
