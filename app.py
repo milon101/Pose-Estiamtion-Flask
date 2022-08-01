@@ -7,17 +7,17 @@ import sys
 
 app = Flask(__name__)
 
-# def get_prediction(image):
-#     # image = Image.open(image_bytes)
-#     # plt.imshow(image)
-#     # plt.show()
-#     mp_pose = mp.solutions.pose
-#     print(image.shape, file=sys.stderr)
-#     with mp_pose.Pose(static_image_mode=True, min_detection_confidence=0.5, model_complexity=2) as pose:
-#         results = pose.process(image)
-#         if not results.pose_landmarks:
-#                 print()
-#     return results.pose_landmarks.landmark
+def get_prediction(image):
+    # image = Image.open(image_bytes)
+    # plt.imshow(image)
+    # plt.show()
+    mp_pose = mp.solutions.pose
+    print(image.shape, file=sys.stderr)
+    with mp_pose.Pose(static_image_mode=True, min_detection_confidence=0.5, model_complexity=2) as pose:
+        results = pose.process(image)
+        if not results.pose_landmarks:
+                print()
+    return results.pose_landmarks.landmark
 
 
 @app.route('/')
