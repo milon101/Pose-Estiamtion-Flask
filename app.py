@@ -1,12 +1,6 @@
-import io
 import json
-import jsonpickle
-from torchvision import models
-import torchvision.transforms as transforms
-from PIL import Image
 from flask import Flask, jsonify, request, Response
 import mediapipe as mp
-from matplotlib import pyplot as plt
 import numpy as np 
 import cv2
 import sys
