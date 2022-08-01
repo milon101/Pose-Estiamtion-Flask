@@ -1,8 +1,8 @@
-# import json
+import json
 from flask import Flask, jsonify, request, Response
-# import mediapipe as mp
-# import numpy as np 
-# import cv2
+import mediapipe as mp
+import numpy as np 
+import cv2
 import sys
 
 app = Flask(__name__)
