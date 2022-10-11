@@ -22,9 +22,6 @@ def get_prediction(image):
 
 @app.route('/')
 def hello():
-    img = cv2.imread("input_image.jpeg")
-    landmarks = get_prediction(img)
-    print(landmarks)
     return 'Hello World!'
 
 
